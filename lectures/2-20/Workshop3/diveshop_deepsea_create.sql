@@ -289,4 +289,95 @@ UNLOCK TABLES;
 
 /* Add DEEPSEA INSERT STATEMENTS BELOW  */
 
+INSERT INTO DIVECUST (Customer_No, Name, Street, City, Country, State_Prov, Zip_Postal_Code )
+VALUES (1050, 'Bob Glushko', '123 West Elm', 'Berkeley', 'U.S.A.', 'CA', '94704');
+
+INSERT INTO DIVEORDS(Order_No, Customer_No, Sale_Date, No_Of_People, Depart_Date, Return_Date, Destination, VacationCost)
+VALUES(410, 1050, '2019-06-01', 3, '2020-05-20', '2020-05-25', 'Key West', 7500);
+
+INSERT INTO DIVESTOK (Item_No, Description, COST )
+VALUES (90128, 'Swim Fins (Nike)',45);
+
+INSERT INTO DIVEITEM(Order_No, Item_No, QTY)
+VALUES(410, 90128, 6);
+
+INSERT INTO DEST (Destination_No, Destination_Name, Travel_Cost)
+VALUES(9, 'Key West', 2500);
+
+ALTER TABLE DIVEORDS ADD PartyNames varchar(255);
+UPDATE DIVEORDS
+SET PartyNames = 'Gilda Radner, Davide Spade'
+WHERE Order_no  = 410;
+
+INSERT INTO DIVEITEM(Order_No, Item_No, QTY)
+VALUES(410, 90058, 3);
+
+INSERT INTO DIVEITEM(Order_No, Item_No, QTY)
+VALUES(410, 90126, 3);
+
+INSERT INTO DIVECUST (Customer_No, Name, Street, City, Country, State_Prov, Zip_Postal_Code)
+VALUES(7050, 'Jenny Burelly', '567 Vine St', 'Oakland', 'U.S.A', 'CA', 94611);
+
+INSERT INTO DIVEORDS(Order_No, Customer_No, Sale_Date, No_Of_People, Depart_Date, Return_Date, Destination, VacationCost)
+VALUES(440, 7050, '2019-06-09', 1, '2020-05-10', '2020-05-13', 'Fiji', 3000);
+
+ALTER TABLE DEST ADD TRAVEL_COST_DEEPSEA int;
+UPDATE DEST
+SET TRAVEL_COST_DEEPSEA = 3000
+WHERE Destination_Name  = 'Fiji';
+
+INSERT INTO DIVEORDS(Order_No, Customer_No, Sale_Date, No_Of_People, Depart_Date, Return_Date, Destination, VacationCost, PartyNames)
+VALUES(441, 7050, '2019-06-09', 2, '2020-05-13', '2020-05-16', 'Fiji', 6000, 'Marvin Martian');
+
+INSERT INTO DIVECUST(Customer_No, Name, Street, City, Country, State_Prov, Zip_Postal_Code)
+VALUES (8050, 'Steve Austin', '1188 Stone Cold Square', 'Miami', 'U.S.A', 'FL', 33101);
+
+INSERT INTO DIVEORDS(Order_No, Customer_No, Sale_Date, No_Of_People, Depart_Date, Return_Date, Destination, VacationCost, PartyNames)
+VALUES(445, 8050, '2019-05-30', 3, '2020-05-21', '2020-05-25', 'Great Barrier Reef', 15000, 'Macho Savage, John Cena,  Hank Hogan');
+
+INSERT INTO DIVEITEM(Order_No, Item_No, QTY)
+VALUES(445, 90113, 3);
+
+INSERT INTO DIVEORDS(Order_No, Customer_No, Sale_Date, No_Of_People, Depart_Date, Return_Date, Destination, VacationCost, PartyNames)
+VALUES(446, 8050, '2019-05-30', 3, '2020-05-21', '2020-05-25', 'Ningaloo Coast', 15000, 'Macho Savage, John Cena,  Hank Hogan');
+
+INSERT INTO DEST (Destination_No, Destination_Name, Travel_Cost)
+VALUES(10, 'Ningaloo Coast', 5000);
+
+INSERT INTO DIVECUST(Customer_No, Name, Street, City, Country, State_Prov, Zip_Postal_Code)
+VALUES (9050, 'Paul Starr', '555 Ringo One Lane', 'Strawberry Fields', 'U.S.A', 'NY', 10001);
+
+INSERT INTO DIVEORDS(Order_No, Customer_No, Sale_Date, No_Of_People, Depart_Date, Return_Date, Destination, VacationCost, PartyNames)
+VALUES(447, 9050, '2019-03-29', 2, '2020-05-20', '2020-05-27', 'Monterey', 14000, 'Harrison George');
+
+INSERT INTO DIVEITEM(Order_No, Item_No, QTY)
+VALUES(447, 90094, 7);
+UPDATE DEST
+SET TRAVEL_COST_DEEPSEA = 7000
+WHERE Destination_Name  = 'Monterey';
+
+INSERT INTO DIVECUST(Customer_No, Name, Street, City, Country, State_Prov, Zip_Postal_Code)
+VALUES (2050, 'Boyce Codd', '12345 Normal St', 'Plano', 'U.S.A', 'TX', 75023);
+
+INSERT INTO DIVEORDS(Order_No, Customer_No, Sale_Date, No_Of_People, Depart_Date, Return_Date, Destination, VacationCost)
+VALUES(448, 2050, '2019-05-30', 2, '2020-05-20', '2020-05-25', 'New Jersey', 4000);
+
+INSERT INTO DIVEITEM(Order_No, Item_No, QTY)
+VALUES(448, 90105, 1);
+
+INSERT INTO DIVEORDS(Order_No, Customer_No, Sale_Date, No_Of_People, Depart_Date, Return_Date, Destination, VacationCost)
+VALUES(449, 2050, '2019-05-31', 2, '2020-05-20', '2020-05-25', 'New Jersey', 4000);
+
+INSERT INTO DIVEITEM(Order_No, Item_No, QTY)
+VALUES(449, 90106, 1);
+
+INSERT INTO DIVECUST(Customer_No, Name, Street, City, Country, State_Prov, Zip_Postal_Code)
+VALUES (3050, 'Bernie Warren', '1600 Pennsylvania Av', 'Washington', 'U.S.A.', 'District of Columbia', 20500);
+
+INSERT INTO DIVEORDS(Order_No, Customer_No, Sale_Date, No_Of_People, Depart_Date, Return_Date, Destination, VacationCost, PartyNames)
+VALUES(450, 3050, '2019-05-31', 2, '2021-01-21', '2021-01-24', 'Florida', 20000, 'Pete Biden');
+
+UPDATE DEST
+SET TRAVEL_COST_DEEPSEA = 10000
+WHERE Destination_Name  = 'Florida';
 
